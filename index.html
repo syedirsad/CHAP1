@@ -110,9 +110,10 @@
                 </div>
             </div>
             
-            <div class="mt-8 text-right flex justify-between items-center">
-                <button id="home-btn" class="bg-gray-300 text-gray-800 font-bold py-2 px-6 rounded-lg hover:bg-gray-400 transition-colors duration-300">Home Page</button>
-                <button id="next-btn" class="bg-amber-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-amber-600 transition-colors duration-300 hidden"></button>
+            <div class="mt-8 flex justify-between items-center">
+                <button id="back-btn" class="bg-gray-300 text-gray-800 font-bold py-3 px-8 rounded-xl shadow-md hover:bg-gray-400 transition-colors duration-300 hidden"></button>
+                <button id="home-btn" class="bg-blue-500 text-white font-bold py-3 px-8 rounded-xl shadow-md hover:bg-blue-600 transition-colors duration-300"></button>
+                <button id="next-btn" class="bg-amber-500 text-white font-bold py-3 px-8 rounded-xl shadow-md hover:bg-amber-600 transition-colors duration-300 hidden"></button>
             </div>
         </div>
 
@@ -120,7 +121,7 @@
         <div id="result-container" class="text-center hidden">
             <h2 id="result-title" class="text-3xl font-bold text-slate-800 mb-4"></h2>
             <p id="score-text" class="text-xl text-slate-600 mb-8"></p>
-            <button id="restart-btn" class="bg-amber-500 text-white font-bold py-3 px-8 rounded-lg hover:bg-amber-600 transition-colors duration-300"></button>
+            <button id="restart-btn" class="bg-amber-500 text-white font-bold py-3 px-8 rounded-xl shadow-md hover:bg-amber-600 transition-colors duration-300"></button>
         </div>
     </div>
 
@@ -134,6 +135,7 @@
                 progressText: "પ્રશ્ન",
                 solutionHeading: "ઉકેલ:",
                 nextBtn: "આગળ",
+                backBtn: "પાછળ", // Added translation for back button
                 resultTitle: "ક્વિઝ પૂર્ણ!",
                 scoreText: "તમારો સ્કોર:",
                 restartBtn: "હોમ પેજ પર જાઓ",
@@ -146,6 +148,7 @@
                 progressText: "Question",
                 solutionHeading: "Solution:",
                 nextBtn: "Next",
+                backBtn: "Back", // Added translation for back button
                 resultTitle: "Quiz Complete!",
                 scoreText: "Your Score:",
                 restartBtn: "Go to Home Page",
@@ -173,11 +176,13 @@
                             // Questions from PYQ March 2025
                             {
                                 answer: 0,
-                                gu: { question: "એક ઇલેક્ટ્રોન $2 \\times 10^4$ N/C ના સદિશાના નિયમિત વિદ્યુતક્ષેત્રમાં 2 cm જેટલા અંતરનું પતન પામે છે. તો ઇલેક્ટ્રોનનો પ્રવેગ ______ m/s$^2$ થાય. <br><small class='text-gray-500'>[$m_e = 9.11 \\times 10^{-31}$ kg લો]</small>", options: ["$3.51 \\times 10^{15}$", "$1.9 \\times 10^{15}$", "શૂન્ય", "$2.9 \\times 10^{15}$"], solution: `ઇલેક્ટ્રોન પર લાગતું બળ $F = qE$. પ્રવેગ $a = F/m = qE/m$. કિંમતો મૂકતાં: $a = (1.602 \\times 10^{-19} \\times 2 \\times 10^4) / (9.11 \\times 10^{-31}) \\approx 3.51 \\times 10^{15}$ m/s$^2$.` }
+                                gu: { question: "એક ઇલેક્ટ્રોન $2 \\times 10^4$ N/C ના સદિશાના નિયમિત વિદ્યુતક્ષેત્રમાં 2 cm જેટલા અંતરનું પતન પામે છે. તો ઇલેક્ટ્રોનનો પ્રવેગ ______ m/s$^2$ થાય. <br><small class='text-gray-500'>[$m_e = 9.11 \\times 10^{-31}$ kg લો]</small>", options: ["$3.51 \\times 10^{15}$", "$1.9 \\times 10^{15}$", "શૂન્ય", "$2.9 \\times 10^{15}$"], solution: `ઇલેક્ટ્રોન પર લાગતું બળ $F = qE$. પ્રવેગ $a = F/m = qE/m$. કિંમતો મૂકતાં: $a = (1.602 \\times 10^{-19} \\times 2 \\times 10^4) / (9.11 \\times 10^{-31}) \\approx 3.51 \\times 10^{15}$ m/s$^2$.` },
+                                origin: 'PYQ March 2025'
                             },
                             {
                                 answer: 2,
-                                gu: { question: "એક સમાન વિદ્યુતક્ષેત્ર $\\vec{E} = 3 \\times 10^3 \\hat{i}$ N/C નો વિચાર કરો. $xy$ સમતલને સમાંતર જેનું સમતલ હોય તેવા 10cm ની બાજુવાળા ચોરસમાંથી આ ક્ષેત્રનું ફ્લક્સ કેટલું હશે?", options: ["$30$ Nm$^2$/C", "$15$ Nm$^2$/C", "શૂન્ય", "$60$ Nm$^2$/C"], solution: `વિદ્યુત ફ્લક્સ $\\Phi = \\vec{E} \\cdot \\vec{A}$. વિદ્યુતક્ષેત્ર $\\vec{E} = 3 \\times 10^3 \\hat{i}$ N/C (X-અક્ષ દિશામાં). ચોરસ $xy$ સમતલને સમાંતર હોવાથી, તેનો ક્ષેત્રફળ સદિશ $\\vec{A}$ Z-અક્ષની દિશામાં ($\\hat{k}$) હશે. $\\hat{i} \\cdot \\hat{k} = 0$ હોવાથી, ફ્લક્સ શૂન્ય થશે.` }
+                                gu: { question: "એક સમાન વિદ્યુતક્ષેત્ર $\\vec{E} = 3 \\times 10^3 \\hat{i}$ N/C નો વિચાર કરો. $xy$ સમતલને સમાંતર જેનું સમતલ હોય તેવા 10cm ની બાજુવાળા ચોરસમાંથી આ ક્ષેત્રનું ફ્લક્સ કેટલું હશે?", options: ["$30$ Nm$^2$/C", "$15$ Nm$^2$/C", "શૂન્ય", "$60$ Nm$^2$/C"], solution: `વિદ્યુત ફ્લક્સ $\\Phi = \\vec{E} \\cdot \\vec{A}$. વિદ્યુતક્ષેત્ર $\\vec{E} = 3 \\times 10^3 \\hat{i}$ N/C (X-અક્ષ દિશામાં). ચોરસ $xy$ સમતલને સમાંતર હોવાથી, તેનો ક્ષેત્રફળ સદિશ $\\vec{A}$ Z-અક્ષની દિશામાં ($\\hat{k}$) હશે. $\\hat{i} \\cdot \\hat{k} = 0$ હોવાથી, ફ્લક્સ શૂન્ય થશે.` },
+                                origin: 'PYQ March 2025'
                             },
                             {
                                 question: "જ્યારે વિદ્યુત ડાયપોલની વિદ્યુત ડાયપોલ મોમેન્ટ $\\vec{p}$ એ અસમાન વિદ્યુતક્ષેત્ર $\\vec{E}$ માં $\\vec{E}$ ને પ્રતિસમાંતર હોય ત્યારે.........",
@@ -188,55 +193,66 @@
                                     "ડાયપોલ પર વિદ્યુતક્ષેત્રને લંબરૂપે બળ લાગે છે."
                                 ],
                                 answer: 1,
-                                gu: { question: "જ્યારે વિદ્યુત ડાયપોલની વિદ્યુત ડાયપોલ મોમેન્ટ $\\vec{p}$ એ અસમાન વિદ્યુતક્ષેત્ર $\\vec{E}$ માં $\\vec{E}$ ને પ્રતિસમાંતર હોય ત્યારે.........", options: [ "ડાયપોલ પર કોઈ પરિણામી બળ લાગતું નથી.", "ડાયપોલ પર ઘટતા ક્ષેત્રની દિશામાં બળ લાગે છે.", "ડાયપોલ પર વધતા ક્ષેત્રની દિશામાં બળ લાગે છે.", "ડાયપોલ પર વિદ્યુતક્ષેત્રને લંબરૂપે બળ લાગે છે." ], solution: `અસમાન વિદ્યુતક્ષેત્રમાં, જ્યારે ડાયપોલ મોમેન્ટ $\\vec{p}$ એ વિદ્યુતક્ષેત્ર $\\vec{E}$ ને પ્રતિસમાંતર હોય, ત્યારે ઋણ વિદ્યુતભાર (-) પ્રબળ ક્ષેત્રમાં હોય છે અને ધન વિદ્યુતભાર (+) નિર્બળ ક્ષેત્રમાં હોય છે. આથી, ડાયપોલ પર ઘટતા ક્ષેત્રની દિશામાં બળ લાગે છે.` }
+                                gu: { question: "જ્યારે વિદ્યુત ડાયપોલની વિદ્યુત ડાયપોલ મોમેન્ટ $\\vec{p}$ એ અસમાન વિદ્યુતક્ષેત્ર $\\vec{E}$ માં $\\vec{E}$ ને પ્રતિસમાંતર હોય ત્યારે.........", options: [ "ડાયપોલ પર કોઈ પરિણામી બળ લાગતું નથી.", "ડાયપોલ પર ઘટતા ક્ષેત્રની દિશામાં બળ લાગે છે.", "ડાયપોલ પર વધતા ક્ષેત્રની દિશામાં બળ લાગે છે.", "ડાયપોલ પર વિદ્યુતક્ષેત્રને લંબરૂપે બળ લાગે છે." ], solution: `અસમાન વિદ્યુતક્ષેત્રમાં, જ્યારે ડાયપોલ મોમેન્ટ $\\vec{p}$ એ વિદ્યુતક્ષેત્ર $\\vec{E}$ ને પ્રતિસમાંતર હોય, ત્યારે ઋણ વિદ્યુતભાર (-) પ્રબળ ક્ષેત્રમાં હોય છે અને ધન વિદ્યુતભાર (+) નિર્બળ ક્ષેત્રમાં હોય છે. આથી, ડાયપોલ પર ઘટતા ક્ષેત્રની દિશામાં બળ લાગે છે.` },
+                                origin: 'PYQ March 2025'
                             },
                             {
                                 question: "સમઘનની કોઈ એક સપાટીના મધ્યબિંદુ પર $q$ વિદ્યુતભારને મૂકવામાં આવે છે, તો સમઘન સાથે સંકળાતું વિદ્યુત ફ્લક્સ ______ .",
                                 options: ["$q/\\epsilon_0$", "$q/2\\epsilon_0$", "$q/6\\epsilon_0$", "$q/4\\epsilon_0$"],
                                 answer: 1,
-                                gu: { question: "સમઘનની કોઈ એક સપાટીના મધ્યબિંદુ પર $q$ વિદ્યુતભારને મૂકવામાં આવે છે, તો સમઘન સાથે સંકળાતું વિદ્યુત ફ્લક્સ ______ .", options: ["$q/\\epsilon_0$", "$q/2\\epsilon_0$", "$q/6\\epsilon_0$", "$q/4\\epsilon_0$"], solution: `ગાઉસના નિયમ મુજબ $\\Phi = Q_{\\text{enclosed}}/\\epsilon_0$. વિદ્યુતભાર $q$ સમઘનની સપાટીના મધ્યબિંદુ પર હોવાથી, તે બે સમઘન દ્વારા વહેંચાયેલો છે. તેથી, એક સમઘન દ્વારા ઘેરાયેલો વિદ્યુતભાર $Q_{\\text{enclosed}} = q/2$. આમ, $\\Phi = q/2\\epsilon_0$.` }
+                                gu: { question: "સમઘનની કોઈ એક સપાટીના મધ્યબિંદુ પર $q$ વિદ્યુતભારને મૂકવામાં આવે છે, તો સમઘન સાથે સંકળાતું વિદ્યુત ફ્લક્સ ______ .", options: ["$q/\\epsilon_0$", "$q/2\\epsilon_0$", "$q/6\\epsilon_0$", "$q/4\\epsilon_0$"], solution: `ગાઉસના નિયમ મુજબ $\\Phi = Q_{\\text{enclosed}}/\\epsilon_0$. વિદ્યુતભાર $q$ સમઘનની સપાટીના મધ્યબિંદુ પર હોવાથી, તે બે સમઘન દ્વારા વહેંચાયેલો છે. તેથી, એક સમઘન દ્વારા ઘેરાયેલો વિદ્યુતભાર $Q_{\\text{enclosed}} = q/2$. આમ, $\\Phi = q/2\\epsilon_0$.` },
+                                origin: 'PYQ March 2025'
                             },
                             {
                                 question: "$0.4 \\mu$C વિદ્યુતભાર ધરાવતા એક નાના ગોળા પર બીજા $-0.8 \\mu$C વિદ્યુતભાર ધરાવતા નાના ગોળા વડે હવામાં લાગતું સ્થિત વિદ્યુત બળ 0.2 N છે. તો બે વિદ્યુતભારો વચ્ચેનું અંતર કેટલું હશે?",
                                 options: ["12 m", "1.2 m", "0.12 m", "0.012 m"],
                                 answer: 2,
-                                gu: { question: "$0.4 \\mu$C વિદ્યુતભાર ધરાવતા એક નાના ગોળા પર બીજા $-0.8 \\mu$C વિદ્યુતભાર ધરાવતા નાના ગોળા વડે હવામાં લાગતું સ્થિત વિદ્યુત બળ 0.2 N છે. તો બે વિદ્યુતભારો વચ્ચેનું અંતર કેટલું હશે?", options: ["12 m", "1.2 m", "0.12 m", "0.012 m"], solution: `કુલંબના નિયમ મુજબ $F = k \\frac{|q_1 q_2|}{r^2}$. $r = \\sqrt{k \\frac{|q_1 q_2|}{F}}$. કિંમતો મૂકતાં: $r = \\sqrt{(9 \\times 10^9) \\frac{|0.4 \\times 10^{-6} \\times (-0.8 \\times 10^{-6})|}{0.2}} = 0.12$ m.` }
+                                gu: { question: "$0.4 \\mu$C વિદ્યુતભાર ધરાવતા એક નાના ગોળા પર બીજા $-0.8 \\mu$C વિદ્યુતભાર ધરાવતા નાના ગોળા વડે હવામાં લાગતું સ્થિત વિદ્યુત બળ 0.2 N છે. તો બે વિદ્યુતભારો વચ્ચેનું અંતર કેટલું હશે?", options: ["12 m", "1.2 m", "0.12 m", "0.012 m"], solution: `કુલંબના નિયમ મુજબ $F = k \\frac{|q_1 q_2|}{r^2}$. $r = \\sqrt{k \\frac{|q_1 q_2|}{F}}$. કિંમતો મૂકતાં: $r = \\sqrt{(9 \\times 10^9) \\frac{|0.4 \\times 10^{-6} \\times (-0.8 \\times 10^{-6})|}{0.2}} = 0.12$ m.` },
+                                origin: 'PYQ March 2025'
                             },
                             {
                                 question: "જો કોઈ પદાર્થ $n_1$ પ્રોટોન અને $n_2$ ઇલેક્ટ્રોન ધરાવતો હોય, તો પદાર્થ પર વિદ્યુતભારનો કુલ જથ્થો ______ છે.",
                                 options: ["$(n_1 - n_2) e$", "$(n_2 - n_1) e$", "$n_1 n_2 e$", "$(n_1 + n_2) e$"],
                                 answer: 0,
-                                gu: { question: "જો કોઈ પદાર્થ $n_1$ પ્રોટોન અને $n_2$ ઇલેક્ટ્રોન ધરાવતો હોય, તો પદાર્થ પર વિદ્યુતભારનો કુલ જથ્થો ______ છે.", options: ["$(n_1 - n_2) e$", "$(n_2 - n_1) e$", "$n_1 n_2 e$", "$(n_1 + n_2) e$"], solution: `પદાર્થ પરનો કુલ વિદ્યુતભાર $Q = (n_1 - n_2)e$.` }
+                                gu: { question: "જો કોઈ પદાર્થ $n_1$ પ્રોટોન અને $n_2$ ઇલેક્ટ્રોન ધરાવતો હોય, તો પદાર્થ પર વિદ્યુતભારનો કુલ જથ્થો ______ છે.", options: ["$(n_1 - n_2) e$", "$(n_2 - n_1) e$", "$n_1 n_2 e$", "$(n_1 + n_2) e$"], solution: `પદાર્થ પરનો કુલ વિદ્યુતભાર $Q = (n_1 - n_2)e$.` },
+                                origin: 'PYQ March 2025'
                             },
-                            // Questions from PYQ July 2025
+                            // Questions from PYQ June 2025 (formerly July 2025)
                             {
                                 answer: 1,
-                                gu: { question: "ઊન સાથે ઘસેલા એક પોલીથીન ટુકડા પર $3.2 \\times 10^{-7}$ C ઋણ વિદ્યુતભાર હોય તો ઊન પરથી પોલીથીન ટુકડા પર સ્થાનાંતરિત થયેલા ઇલેક્ટ્રોનની સંખ્યા કેટલી હશે?", options: ["$2 \\times 10^{11}$", "$2 \\times 10^{12}$", "$5 \\times 10^{11}$", "$5 \\times 10^{26}$"], solution: `વિદ્યુતભારના ક્વોન્ટાઇઝેશન મુજબ, $Q = ne$. તેથી, $n = Q/e = (3.2 \\times 10^{-7}) / (1.6 \\times 10^{-19}) = 2 \\times 10^{12}$.` }
+                                gu: { question: "ઊન સાથે ઘસેલા એક પોલીથીન ટુકડા પર $3.2 \\times 10^{-7}$ C ઋણ વિદ્યુતભાર હોય તો ઊન પરથી પોલીથીન ટુકડા પર સ્થાનાંતરિત થયેલા ઇલેક્ટ્રોનની સંખ્યા કેટલી હશે?", options: ["$2 \\times 10^{11}$", "$2 \\times 10^{12}$", "$5 \\times 10^{11}$", "$5 \\times 10^{26}$"], solution: `વિદ્યુતભારના ક્વોન્ટાઇઝેશન મુજબ, $Q = ne$. તેથી, $n = Q/e = (3.2 \\times 10^{-7}) / (1.6 \\times 10^{-19}) = 2 \\times 10^{12}$.` },
+                                origin: 'PYQ June 2025'
                             },
                             {
                                 answer: 2,
-                                gu: { question: "આપેલ વિદ્યુત-ડાયપોલના કેન્દ્રથી $r$ (જ્યાં, $r >> a$) જેટલા સમાન અંતરે તેના વિષુવવૃત્તીય સમતલ અને તેની અક્ષ પર આવેલ બિંદુઓ પાસે વિદ્યુત ડાયપોલના વિદ્યુતક્ષેત્રની તીવ્રતાઓના માનનો ગુણોત્તર ______.", options: ["1 : 1", "2 : 1", "1 : 2", "$1 : \\sqrt{2}$"], solution: `વિદ્યુત ડાયપોલની અક્ષીય રેખા પર વિદ્યુતક્ષેત્ર $E_{axial} = \\frac{2kp}{r^3}$ અને વિષુવવૃત્તીય સમતલ પર $E_{equatorial} = \\frac{kp}{r^3}$ હોય છે. તેથી, વિષુવવૃત્તીય થી અક્ષીયનો ગુણોત્તર $E_{equatorial} : E_{axial} = \\frac{kp}{r^3} : \\frac{2kp}{r^3} = 1:2$` }
+                                gu: { question: "આપેલ વિદ્યુત-ડાયપોલના કેન્દ્રથી $r$ (જ્યાં, $r >> a$) જેટલા સમાન અંતરે તેના વિષુવવૃત્તીય સમતલ અને તેની અક્ષ પર આવેલ બિંદુઓ પાસે વિદ્યુત ડાયપોલના વિદ્યુતક્ષેત્રની તીવ્રતાઓના માનનો ગુણોત્તર ______.", options: ["1 : 1", "2 : 1", "1 : 2", "$1 : \\sqrt{2}$"], solution: `વિદ્યુત ડાયપોલની અક્ષીય રેખા પર વિદ્યુતક્ષેત્ર $E_{axial} = \\frac{2kp}{r^3}$ અને વિષુવવૃત્તીય સમતલ પર $E_{equatorial} = \\frac{kp}{r^3}$ હોય છે. તેથી, વિષુવવૃત્તીય થી અક્ષીયનો ગુણોત્તર $E_{equatorial} : E_{axial} = \\frac{kp}{r^3} : \\frac{2kp}{r^3} = 1:2$` },
+                                origin: 'PYQ June 2025'
                             },
                             {
                                 answer: 1,
-                                gu: { question: "સમાન રીતે વિદ્યુતભારિત અનંત લંબાઈના સીધા તારને લીધે તારથી $r$ જેટલા લંબ અંતરે મળતું વિદ્યુતક્ષેત્ર ______.", options: ["$r^3$ ના વ્યસ્ત પ્રમાણમાં હોય છે.", "$r$ ના વ્યસ્ત પ્રમાણમાં હોય છે.", "$r^2$ ના સમપ્રમાણમાં હોય છે.", "$r$ ના સમપ્રમાણમાં હોય છે."], solution: `સમાન રીતે વિદ્યુતભારિત અનંત લંબાઈના સીધા તાર માટે, તારથી $r$ જેટલા લંબ અંતરે વિદ્યુતક્ષેત્ર $E = \\frac{\\lambda}{2 \\pi \\epsilon_0 r}$ સૂત્ર દ્વારા આપવામાં આવે છે. આ સૂત્ર દર્શાવે છે કે વિદ્યુતક્ષેત્ર $r$ ના વ્યસ્ત પ્રમાણમાં હોય છે.` }
+                                gu: { question: "સમાન રીતે વિદ્યુતભારિત અનંત લંબાઈના સીધા તારને લીધે તારથી $r$ જેટલા લંબ અંતરે મળતું વિદ્યુતક્ષેત્ર ______.", options: ["$r^3$ ના વ્યસ્ત પ્રમાણમાં હોય છે.", "$r$ ના વ્યસ્ત પ્રમાણમાં હોય છે.", "$r^2$ ના સમપ્રમાણમાં હોય છે.", "$r$ ના સમપ્રમાણમાં હોય છે."], solution: `સમાન રીતે વિદ્યુતભારિત અનંત લંબાઈના સીધા તાર માટે, તારથી $r$ જેટલા લંબ અંતરે વિદ્યુતક્ષેત્ર $E = \\frac{\\lambda}{2 \\pi \\epsilon_0 r}$ સૂત્ર દ્વારા આપવામાં આવે છે. આ સૂત્ર દર્શાવે છે કે વિદ્યુતક્ષેત્ર $r$ ના વ્યસ્ત પ્રમાણમાં હોય છે.` },
+                                origin: 'PYQ June 2025'
                             },
                             {
                                 answer: 0,
-                                gu: { question: "ચાર બિંદુવત્ વિદ્યુતભારો $q_A = 5\\mu$C, $q_B = -2\\mu$C, $q_C = 5\\mu$C અને $q_D = -2\\mu$C, એક 5 cm ની બાજુવાળા ચોરસ ABCD ના શિરોબિંદુઓ પર અનુક્રમે મૂકેલા છે. જો ચોરસના કેન્દ્ર પર $-1\\mu$C વિદ્યુતભાર મુકવામાં આવે તો તેના પર લાગતા બળનું માન ______ N હશે.", options: ["0", "$3\\sqrt{2}\\times 10^{-6}$", "$\\frac{3}{\\sqrt{2}}\\times 10^{-6}$", "$2.5 \\times 10^{-8}$"], solution: `ચોરસના કેન્દ્ર પર મુકેલા વિદ્યુતભાર પર, સમમિતિને કારણે, વિરુદ્ધ શિરોબિંદુઓ પરના વિદ્યુતભારો દ્વારા લાગતા બળો એકબીજાને રદ કરશે. તેથી, ચોખ્ખું બળ શૂન્ય છે.` }
+                                gu: { question: "ચાર બિંદુવત્ વિદ્યુતભારો $q_A = 5\\mu$C, $q_B = -2\\mu$C, $q_C = 5\\mu$C અને $q_D = -2\\mu$C, એક 5 cm ની બાજુવાળા ચોરસ ABCD ના શિરોબિંદુઓ પર અનુક્રમે મૂકેલા છે. જો ચોરસના કેન્દ્ર પર $-1\\mu$C વિદ્યુતભાર મુકવામાં આવે તો તેના પર લાગતા બળનું માન ______ N હશે.", options: ["0", "$3\\sqrt{2}\\times 10^{-6}$", "$\\frac{3}{\\sqrt{2}}\\times 10^{-6}$", "$2.5 \\times 10^{-8}$"], solution: `ચોરસના કેન્દ્ર પર મુકેલા વિદ્યુતભાર પર, સમમિતિને કારણે, વિરુદ્ધ શિરોબિંદુઓ પરના વિદ્યુતભારો દ્વારા લાગતા બળો એકબીજાને રદ કરશે. તેથી, ચોખ્ખું બળ શૂન્ય છે.` },
+                                origin: 'PYQ June 2025'
                             },
                             // Questions from GUJCET 2025
                             {
                                 answer: 1,
-                                gu: { question: "બિંદુવત્ વિદ્યુતભાર 2q થી r અંતરે વિદ્યુતક્ષેત્રની તીવ્રતા E હોય તો, q જેટલા વિદ્યુતભાર વડે સમાન વિદ્યુતભારિત R ત્રિજ્યાની પાતળી ગોળાકાર કવચના કેન્દ્રથી r/2 અંતરે (r >> R) વિદ્યુતક્ષેત્રની તીવ્રતા E' = ____.", options: ["E", "2E", "E/2", "4E"], solution: `પ્રથમ, $E = \\frac{k(2q)}{r^2}$. ગોળાકાર કવચ માટે, કેન્દ્રથી $r/2$ અંતરે વિદ્યુતક્ષેત્ર $E' = \\frac{kq}{(r/2)^2} = \\frac{4kq}{r^2}$. હવે, $E' = 2 \\times (\\frac{2kq}{r^2}) = 2E$.` }
+                                gu: { question: "બિંદુવત્ વિદ્યુતભાર 2q થી r અંતરે વિદ્યુતક્ષેત્રની તીવ્રતા E હોય તો, q જેટલા વિદ્યુતભાર વડે સમાન વિદ્યુતભારિત R ત્રિજ્યાની પાતળી ગોળાકાર કવચના કેન્દ્રથી r/2 અંતરે (r >> R) વિદ્યુતક્ષેત્રની તીવ્રતા E' = ____.", options: ["E", "2E", "E/2", "4E"], solution: `પ્રથમ, $E = \\frac{k(2q)}{r^2}$. ગોળાકાર કવચ માટે, કેન્દ્રથી $r/2$ અંતરે વિદ્યુતક્ષેત્ર $E' = \\frac{kq}{(r/2)^2} = \\frac{4kq}{r^2}$. હવે, $E' = 2 \\times (\\frac{2kq}{r^2}) = 2E$.` },
+                                origin: 'GUJCET 2025'
                             },
                             {
                                 answer: 2,
-                                gu: { question: "X - અક્ષ પર 0.5R જેટલા સમાન અંતરે q મૂલ્યના 15 વિદ્યુતભારો ગોઠવેલ છે. જેના કેન્દ્ર પર કોઈ એક વિદ્યુતભાર હોય તેવા 1.5R ત્રિજ્યાના ગોળીય બંધ પૃષ્ઠ સાથે સંકળાયેલ મહત્તમ વિદ્યુત ફ્લક્સ, ____.", options: ["શૂન્ય", "$\\frac{7q}{\\epsilon_0}$", "$\\frac{15q}{\\epsilon_0}$", "$\\frac{5q}{\\epsilon_0}$"], solution: `ગાઉસના નિયમ મુજબ, $\\Phi = Q_{enclosed}/\\epsilon_0$. 1.5R ત્રિજ્યાના ગોળામાં, જો વિદ્યુતભારો 0.5R ના અંતરે ગોઠવાયેલા હોય અને કેન્દ્ર પર એક વિદ્યુતભાર હોય, તો મહત્તમ 15 વિદ્યુતભારો ઘેરી શકાય છે. તેથી, $Q_{enclosed} = 15q$. આમ, $\\Phi = \\frac{15q}{\\epsilon_0}$.` }
+                                gu: { question: "X - અક્ષ પર 0.5R જેટલા સમાન અંતરે q મૂલ્યના 15 વિદ્યુતભારો ગોઠવેલ છે. જેના કેન્દ્ર પર કોઈ એક વિદ્યુતભાર હોય તેવા 1.5R ત્રિજ્યાના ગોળીય બંધ પૃષ્ઠ સાથે સંકળાયેલ મહત્તમ વિદ્યુત ફ્લક્સ, ____.", options: ["શૂન્ય", "$\\frac{7q}{\\epsilon_0}$", "$\\frac{15q}{\\epsilon_0}$", "$\\frac{5q}{\\epsilon_0}$"], solution: `ગાઉસના નિયમ મુજબ, $\\Phi = Q_{enclosed}/\\epsilon_0$. 1.5R ત્રિજ્યાના ગોળામાં, જો વિદ્યુતભારો 0.5R ના અંતરે ગોઠવાયેલા હોય અને કેન્દ્ર પર એક વિદ્યુતભાર હોય, તો મહત્તમ 15 વિદ્યુતભારો ઘેરી શકાય છે. તેથી, $Q_{enclosed} = 15q$. આમ, $\\Phi = \\frac{15q}{\\epsilon_0}$.` },
+                                origin: 'GUJCET 2025'
                             },
                             {
                                 answer: 0,
-                                gu: { question: "ગુરુત્વમુક્ત અવકાશમાં E તીવ્રતાવાળા સમાન વિદ્યુતક્ષેત્રમાં 2m દળના q વીજભારને સ્થિર રાખેલ છે. વીજભારને મુક્ત કરતાં n સેકન્ડ બાદ તેની ઝડપ ____.", options: ["$\\frac{qEn}{2m}$", "$\\frac{qEn}{m}$", "$\\frac{2qEn}{m}$", "$2mqE$"], solution: `વિદ્યુત બળ $F = qE$. પ્રવેગ $a = F/(\\text{mass}) = qE/(2m)$. ગતિના સમીકરણ $v = u + at$ પરથી (જ્યાં $u=0$), $v = (\\frac{qE}{2m})n = \\frac{qEn}{2m}$.` }
+                                gu: { question: "ગુરુત્વમુક્ત અવકાશમાં E તીવ્રતાવાળા સમાન વિદ્યુતક્ષેત્રમાં 2m દળના q વીજભારને સ્થિર રાખેલ છે. વીજભારને મુક્ત કરતાં n સેકન્ડ બાદ તેની ઝડપ ____.", options: ["$\\frac{qEn}{2m}$", "$\\frac{qEn}{m}$", "$\\frac{2qEn}{m}$", "$2mqE$"], solution: `વિદ્યુત બળ $F = qE$. પ્રવેગ $a = F/(\\text{mass}) = qE/(2m)$. ગતિના સમીકરણ $v = u + at$ પરથી (જ્યાં $u=0$), $v = (\\frac{qE}{2m})n = \\frac{qEn}{2m}$.` },
+                                origin: 'GUJCET 2025'
                             }
                         ]
                     },
@@ -392,15 +408,18 @@
                             },
                             {
                                 answer: 0,
-                                gu: { question: `એક અનંત લંબાઈના રેખીય વિદ્યુતભાર 2cm અંતરે $9 \\times 10^4$ NC$^{-1}$ નું વિદ્યુતક્ષેત્ર ઉત્પન્ન કરે છે, તો રેખીય વિદ્યુતભાર ઘનતા ______.<br>`, options: [`$0.1mCm^{-1}$`, `$0.1\\mu Cm^{-1}$`, `$0.2mCm^{-1}$`, `$0.2\\mu Cm^{-1}`], solution: `અનંત લંબાઈના રેખીય વિદ્યુતભારને કારણે વિદ્યુતક્ષેત્ર $E = \\frac{2k\\lambda}{r}$. $\\lambda = \\frac{Er}{2k} = \\frac{(9 \\times 10^4)(0.02)}{2 \\times (9 \\times 10^9)} = 0.1 \\times 10^{-6}$ C/m $= 0.1 \\mu$C/m.` }
+                                gu: { question: `એક અનંત લંબાઈના રેખીય વિદ્યુતભાર 2cm અંતરે $9 \\times 10^4$ NC$^{-1}$ નું વિદ્યુતક્ષેત્ર ઉત્પન્ન કરે છે, તો રેખીય વિદ્યુતભાર ઘનતા ______.<br>`, options: [`$0.1mCm^{-1}$`, `$0.1\\mu Cm^{-1}$`, `$0.2mCm^{-1}$`, `$0.2\\mu Cm^{-1}`], solution: `અનંત લંબાઈના રેખીય વિદ્યુતભારને કારણે વિદ્યુતક્ષેત્ર $E = \\frac{2k\\lambda}{r}$. $\\lambda = \\frac{Er}{2k} = \\frac{(9 \\times 10^4)(0.02)}{2 \\times (9 \\times 10^9)} = 0.1 \\times 10^{-6}$ C/m $= 0.1 \\mu$C/m.` },
+                                origin: 'PYQ March 2024'
                             },
                             {
                                 answer: 1,
-                                gu: { question: `જો કોઈ પદાર્થ $10^{24}$ ઇલેક્ટ્રોન અને $10^{26}$ પ્રોટોન ધરાવતો હોય, તો પદાર્થ પર વિદ્યુતભારનો જથ્થો ______ C.<br>`, options: [`$1.6 \\times 10^{-17}$`, `$1.6 \\times 10^{17}$`, `$1.58 \\times 10^7$`, `$1.58 \\times 10^{-7}`], solution: `પદાર્થ પરનો કુલ વિદ્યુતભાર $Q = (N_p - N_e)e$. $Q = (10^{26} - 10^{24}) \\times 1.6 \\times 10^{-19} = 1.584 \\times 10^7$ C. આપેલા વિકલ્પોમાંથી, $1.6 \\times 10^{17}$ C એ સૌથી નજીકનો વિકલ્પ છે, જોકે ગણતરી મુજબ $1.58 \\times 10^7$ C આવે છે.` }
+                                gu: { question: `જો કોઈ પદાર્થ $10^{24}$ ઇલેક્ટ્રોન અને $10^{26}$ પ્રોટોન ધરાવતો હોય, તો પદાર્થ પર વિદ્યુતભારનો જથ્થો ______ C.<br>`, options: [`$1.6 \\times 10^{-17}$`, `$1.6 \\times 10^{17}$`, `$1.58 \\times 10^7$`, `$1.58 \\times 10^{-7}`], solution: `પદાર્થ પરનો કુલ વિદ્યુતભાર $Q = (N_p - N_e)e$. $Q = (10^{26} - 10^{24}) \\times 1.6 \\times 10^{-19} = 1.584 \\times 10^7$ C. આપેલા વિકલ્પોમાંથી, $1.6 \\times 10^{17}$ C એ સૌથી નજીકનો વિકલ્પ છે, જોકે ગણતરી મુજબ $1.58 \\times 10^7$ C આવે છે.` },
+                                origin: 'PYQ March 2024'
                             },
                             {
                                 answer: 3,
-                                gu: { question: `જ્યારે વિદ્યુત ડાયપોલની વિદ્યુત ડાયપોલ મોમેન્ટ $\\vec{p}$ એ અસમાન વિદ્યુતક્ષેત્ર $\\vec{E}$ માં સમાન હોય ત્યારે ડાયપોલ પર લાગતું બળ ______.<br>`, options: [`શૂન્ય હોય છે.`, `ઘટતા ક્ષેત્રની દિશામાં લાગે છે.`, `$\\vec{E}$ ક્ષેત્રને લંબ દિશામાં લાગે છે.`, `વધતા ક્ષેત્રની દિશામાં લાગે છે.`], solution: `જ્યારે વિદ્યુત ડાયપોલ મોમેન્ટ $\\vec{p}$ એ અસમાન વિદ્યુતક્ષેત્ર $\\vec{E}$ માં સમાંતર હોય, ત્યારે ડાયપોલ પર વધતા ક્ષેત્રની દિશામાં બળ લાગે છે.` }
+                                gu: { question: `જ્યારે વિદ્યુત ડાયપોલની વિદ્યુત ડાયપોલ મોમેન્ટ $\\vec{p}$ એ અસમાન વિદ્યુતક્ષેત્ર $\\vec{E}$ માં સમાન હોય ત્યારે ડાયપોલ પર લાગતું બળ ______.<br>`, options: [`શૂન્ય હોય છે.`, `ઘટતા ક્ષેત્રની દિશામાં લાગે છે.`, `$\\vec{E}$ ક્ષેત્રને લંબ દિશામાં લાગે છે.`, `વધતા ક્ષેત્રની દિશામાં લાગે છે.`], solution: `જ્યારે વિદ્યુત ડાયપોલ મોમેન્ટ $\\vec{p}$ એ અસમાન વિદ્યુતક્ષેત્ર $\\vec{E}$ માં સમાંતર હોય, ત્યારે ડાયપોલ પર વધતા ક્ષેત્રની દિશામાં બળ લાગે છે.` },
+                                origin: 'PYQ March 2024'
                             },
                             // GUJCET 2024 Questions
                             {
@@ -972,7 +991,7 @@
                                     ],
                                     solution: `ટોર્ક $\\tau = pE \\sin\\theta$.
                                     $p = 4 \\times 10^{-9}$ cm $= 4 \\times 10^{-11}$ m.
-                                    $\\tau = (4 \\times 10^{-11}) \\times (5 \\times 10^4) \\times \\sin(60°) = 20 \\times 10^{-7} \\times \\frac{\\sqrt{3}}{2} = 10\\sqrt{3} \\times 10^{-7} \\approx 17.32 \\times 10^{-7}$ Nm $= 1.732 \\times 10^{-6}$ Nm.
+                                    $\\tau = (4 \\times 10^{-11}) \\times (5 \\times 10^4) \\times \\sin(60°) = 20 \\times 10^{-7} \\times \\frac{\\sqrt{3}}{2} = 10\\sqrt{3} \\times 10^{-7}$ Nm $= 1.732 \\times 10^{-6}$ Nm.
                                     The closest option is $1.73 \\times 10^{-4}$ Nm (assuming the original question's options had a typo and meant $1.73 \\times 10^{-6}$ Nm or the dipole moment unit was different). Based on the options, let's recheck the unit of dipole moment. If it was $4 \\times 10^{-9}$ Cm, then $p = 4 \\times 10^{-9}$ Cm.
                                     $\\tau = (4 \\times 10^{-9}) \\times (5 \\times 10^4) \\times \\sin(60°) = 20 \\times 10^{-5} \\times \\frac{\\sqrt{3}}{2} = 10\\sqrt{3} \\times 10^{-5} \\approx 17.32 \\times 10^{-5}$ Nm $= 1.732 \\times 10^{-4}$ Nm.`
                                 },
@@ -986,7 +1005,7 @@
                                     ],
                                     solution: `Torque $\\tau = pE \\sin\\theta$.
                                     $p = 4 \\times 10^{-9}$ cm $= 4 \\times 10^{-11}$ m.
-                                    $\\tau = (4 \\times 10^{-11}) \\times (5 \\times 10^4) \\times \\sin(60°) = 20 \\times 10^{-7} \\times \\frac{\\sqrt{3}}{2} = 10\\sqrt{3} \\times 10^{-7} \\approx 17.32 \\times 10^{-7}$ Nm $= 1.732 \\times 10^{-6}$ Nm.
+                                    $\\tau = (4 \\times 10^{-11}) \\times (5 \\times 10^4) \\times \\sin(60°) = 20 \\times 10^{-7} \\times \\frac{\\sqrt{3}}{2} = 10\\sqrt{3} \\times 10^{-7}$ Nm $= 1.732 \\times 10^{-6}$ Nm.
                                     The closest option is $1.73 \\times 10^{-4}$ Nm (assuming the original question's options had a typo and meant $1.73 \\times 10^{-6}$ Nm or the dipole moment unit was different). Based on the options, let's recheck the unit of dipole moment. If it was $4 \\times 10^{-9}$ Cm, then $p = 4 \\times 10^{-9}$ Cm.
                                     $\\tau = (4 \\times 10^{-9}) \\times (5 \\times 10^4) \\times \\sin(60°) = 20 \\times 10^{-5} \\times \\frac{\\sqrt{3}}{2} = 10\\sqrt{3} \\times 10^{-5} \\approx 17.32 \\times 10^{-5}$ Nm $= 1.732 \\times 10^{-4}$ Nm.`
                                 },
@@ -1019,14 +1038,6 @@
                                     If the answer is $6 \\times 10^3$, then $E_1$ should have been $9 \\times 10^3$.
                                     Let's stick to the calculation based on the provided text, which is $6 \\times 10^4$.
                                     However, if we are forced to pick from the options and the intended answer is $6 \\times 10^3$, then the initial $E$ or $r$ would need to be different.
-                                    Given the options and the provided solution in the image being $6 \\times 10^3$, let's assume there's a factor of 10 difference in the question's given E.
-                                    If $E_1 = 9 \\times 10^3$ at 2cm, then $E_2 = (9 \\times 10^3) \\times (2/3) = 6 \\times 10^3$ NC$^{-1}$.
-                                    Since the image explicitly shows $9 \\times 10^4$, and the expected answer is $6 \\times 10^3$, there's an inconsistency.
-                                    Let's choose the option that corresponds to the given answer in the image, assuming the image's solution is the intended one, even if it implies a different starting value for E than what's written.
-                                    The solution in the image is for option B, which is $6 \\times 10^3$.
-                                    So, the calculation should lead to $6 \\times 10^3$.
-                                    If $E_1 = 9 \\times 10^4$, then $E_2 = 6 \\times 10^4$.
-                                    If $E_1 = 9 \\times 10^3$, then $E_2 = 6 \\times 10^3$.
                                     Given the options, and the image's checkmark, the answer is $6 \\times 10^3$. This means the question's $9 \\times 10^4$ might be a typo and should be $9 \\times 10^3$.
                                     I will use the answer from the image for consistency.
                                     So, $E_2 = 6 \\times 10^3$ NC$^{-1}$.`
@@ -1066,13 +1077,14 @@
         const solutionDisplay = document.getElementById('solution-display');
         const solutionText = document.getElementById('solution-text');
         const nextBtn = document.getElementById('next-btn');
+        const backBtn = document.getElementById('back-btn'); // New Back button element
         const restartBtn = document.getElementById('restart-btn');
         const progressText = document.getElementById('progress');
         const progressBar = document.getElementById('progress-bar');
         const scoreText = document.getElementById('score-text');
         const langGuBtn = document.getElementById('lang-gu-btn');
         const langEnBtn = document.getElementById('lang-en-btn');
-        const homeBtn = document.getElementById('home-btn'); // New Home button
+        const homeBtn = document.getElementById('home-btn'); // Existing Home button
 
         // --- App State ---
         let currentLanguage = 'gu';
@@ -1100,9 +1112,10 @@
 
             document.getElementById('solution-heading').innerText = t.solutionHeading;
             document.getElementById('next-btn').innerText = t.nextBtn;
+            document.getElementById('back-btn').innerText = t.backBtn; // Set text for new Back button
             document.getElementById('result-title').innerText = t.resultTitle;
             document.getElementById('restart-btn').innerText = t.restartBtn;
-            document.getElementById('home-btn').innerText = t.homeBtn; // Set text for new Home button
+            document.getElementById('home-btn').innerText = t.homeBtn; // Set text for Home button
 
             langGuBtn.classList.toggle('active', currentLanguage === 'gu');
             langEnBtn.classList.toggle('active', currentLanguage === 'en');
@@ -1144,7 +1157,12 @@
             currentQuiz = currentChapter.quizzes.find(q => q.id === quizId);
             currentQuizQuestions = [...currentQuiz.questions];
 
-            quizTitle.innerText = `${currentChapter[currentLanguage].name} : ${currentQuiz.name}`;
+            // Update quiz name for display if it's the specific one to be renamed
+            if (currentQuiz.id === 'quiz1_pyq_2025') {
+                quizTitle.innerText = `${currentChapter[currentLanguage].name} : PYQ June 2025`;
+            } else {
+                quizTitle.innerText = `${currentChapter[currentLanguage].name} : ${currentQuiz.name}`;
+            }
             quizDescription.innerText = currentChapter[currentLanguage].description;
 
             homePage.classList.add('hidden');
@@ -1172,7 +1190,13 @@
             progressBar.style.width = `${progressPercentage}%`;
 
             // Display question text and highlight origin
-            questionText.innerHTML = `${questionContent.question} <br><small class='text-gray-500'>[<strong>${currentQuestion.origin}</strong>]</small>`;
+            // Check if origin needs to be renamed for display
+            let displayedOrigin = currentQuestion.origin;
+            if (displayedOrigin === 'PYQ July 2025') {
+                displayedOrigin = 'PYQ June 2025';
+            }
+            questionText.innerHTML = `${questionContent.question} <br><small class='text-gray-500 font-semibold'>[${displayedOrigin}]</small>`;
+
 
             questionContent.options.forEach((option, index) => {
                 const button = document.createElement('button');
@@ -1183,6 +1207,13 @@
                 optionsContainer.appendChild(button);
             });
             renderMathJax([questionText, optionsContainer]);
+
+            // Manage back button visibility
+            if (currentQuestionIndex > 0) {
+                backBtn.classList.remove('hidden');
+            } else {
+                backBtn.classList.add('hidden');
+            }
         }
 
         function resetState() {
@@ -1229,6 +1260,13 @@
             }
         }
 
+        function handleBackButton() {
+            currentQuestionIndex--;
+            if (currentQuestionIndex >= 0) {
+                showQuestion();
+            }
+        }
+
         function showScore() {
             currentView = 'result';
             resetState();
@@ -1247,7 +1285,12 @@
                 renderHomePage();
             } else if (currentView === 'quiz') {
                 // Re-render current quiz question in new language
-                quizTitle.innerText = `${currentChapter[currentLanguage].name} : ${currentQuiz.name}`;
+                // Update quiz name for display if it's the specific one to be renamed
+                if (currentQuiz.id === 'quiz1_pyq_2025') {
+                    quizTitle.innerText = `${currentChapter[currentLanguage].name} : PYQ June 2025`;
+                } else {
+                    quizTitle.innerText = `${currentChapter[currentLanguage].name} : ${currentQuiz.name}`;
+                }
                 quizDescription.innerText = currentChapter[currentLanguage].description;
                 showQuestion();
             } else if (currentView === 'result') {
@@ -1257,10 +1300,11 @@
 
         // --- Event Listeners ---
         nextBtn.addEventListener('click', handleNextButton);
+        backBtn.addEventListener('click', handleBackButton); // Event listener for back button
         restartBtn.addEventListener('click', renderHomePage);
         langGuBtn.addEventListener('click', () => setLanguage('gu'));
         langEnBtn.addEventListener('click', () => setLanguage('en'));
-        homeBtn.addEventListener('click', renderHomePage); // New event listener for Home button
+        homeBtn.addEventListener('click', renderHomePage); // Home button event listener
 
         // --- Initial Load ---
         document.addEventListener('DOMContentLoaded', renderHomePage);
