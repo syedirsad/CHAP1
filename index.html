@@ -45,6 +45,17 @@
             color: white;
             font-weight: bold;
         }
+        /* Updated CSS for logo-watermark */
+        #logo-watermark {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px; /* Doubled width as requested */
+            opacity: 0.15;
+            z-index: 50;
+            pointer-events: none; /* Allows clicks to pass through the watermark */
+        }
     </style>
     <!-- MathJax Configuration and Loading -->
     <script>
@@ -581,7 +592,7 @@
                                         `$1.024 \\times 10^{-24}$`,
                                         `$1.024 \\times 10^{-23}$`
                                     ],
-                                    solution: `કુલંબના નિયમ મુજબ, $F = k \\frac{|q_1 q_2|}{r^2}$. એક $\\alpha$ - કણ પરનો વિદ્યુતભાર $q_{\\alpha} = 2e = 3.2 \\times 10^{-19}$ C. $F = (9 \\times 10^9) \\times \\frac{(3.2 \\times 10^{-19})^2}{(0.03)^2} = 1.024 \\times 10^{-24}$ N.`
+                                    solution: `ક કુલંબના નિયમ મુજબ, $F = k \\frac{|q_1 q_2|}{r^2}$. એક $\\alpha$ - કણ પરનો વિદ્યુતભાર $q_{\\alpha} = 2e = 3.2 \\times 10^{-19}$ C. $F = (9 \\times 10^9) \\times \\frac{(3.2 \\times 10^{-19})^2}{(0.03)^2} = 1.024 \\times 10^{-24}$ N.`
                                 },
                                 en: {
                                     question: `The Coulomb repulsive force between two $\\alpha$ - particles kept at a distance of 3 cm in air is ______ N.`,
@@ -808,5 +819,6 @@
         // --- Initial Load ---
         document.addEventListener('DOMContentLoaded', renderHomePage);
     </script>
+    <img id="logo-watermark" src="https://raw.githubusercontent.com/syedirsad/CHAP1/main/logo.png" alt="NPG Logo">
 </body>
 </html>
