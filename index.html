@@ -477,7 +477,7 @@
                     // NEW QUIZ FOR PYQ 2023
                     {
                         id: 'quiz1_pyq_2023',
-                        name: 'PYQ March 2023',
+                        name: 'PYQ March 2023 & July 2023', // Renamed the tab
                         questions: [
                             // Question 9 from image_8a6b41.jpg
                             {
@@ -605,6 +605,139 @@
                                     solution: `According to Coulomb's law, $F = k \\frac{|q_1 q_2|}{r^2}$. Charge on an $\\alpha$ - particle $q_{\\alpha} = 2e = 3.2 \\times 10^{-19}$ C. $F = (9 \\times 10^9) \\times \\frac{(3.2 \\times 10^{-19})^2}{(0.03)^2} = 1.024 \\times 10^{-24}$ N.`
                                 },
                                 origin: 'PYQ March 2023'
+                            },
+                            // New questions from PYQ July 2023
+                            {
+                                answer: 0, // Option A: 6.25 x 10^18
+                                gu: {
+                                    question: `1 C વીજભારને સમતુલ્ય પ્રાથમિક કે મૂળભૂત વીજભાર કેટલો?
+                                    <img src="https://raw.githubusercontent.com/syedirsad/CHAP1/main/image_88a48c.png" alt="Question on elementary charge" class="mx-auto my-4 max-w-xs">`,
+                                    options: [
+                                        `$6.25 \\times 10^{18}$`,
+                                        `$6.25 \\times 10^{19}$`,
+                                        `$6.25 \\times 10^{-18}$`,
+                                        `$6.25 \\times 10^{-19}$`
+                                    ],
+                                    solution: `વિદ્યુતભારના ક્વોન્ટાઇઝેશન મુજબ, $Q = ne$. તેથી, $n = Q/e = 1 / (1.6 \\times 10^{-19}) = 6.25 \\times 10^{18}$.`
+                                },
+                                en: {
+                                    question: `What is the number of elementary charges equivalent to 1 C of charge?
+                                    <img src="https://raw.githubusercontent.com/syedirsad/CHAP1/main/image_88a48c.png" alt="Question on elementary charge" class="mx-auto my-4 max-w-xs">`,
+                                    options: [
+                                        `$6.25 \\times 10^{18}$`,
+                                        `$6.25 \\times 10^{19}$`,
+                                        `$6.25 \\times 10^{-18}$`,
+                                        `$6.25 \\times 10^{-19}$`
+                                    ],
+                                    solution: `According to the quantization of charge, $Q = ne$. So, $n = Q/e = 1 / (1.6 \\times 10^{-19}) = 6.25 \\times 10^{18}$.`
+                                },
+                                origin: 'PYQ July 2023'
+                            },
+                            {
+                                answer: 2, // Option C: 0 Wb
+                                gu: {
+                                    question: `એક સમાન વિદ્યુતક્ષેત્ર ધન X-અક્ષ માટે ધન X-દિશામાં અને ઋણ X-અક્ષ માટે ઋણ દિશામાં છે. 20 cm લંબાઈ અને 2 cm ત્રિજ્યાના નળાકારનું કેન્દ્ર ઊગમબિંદુ પર અને અક્ષ X-દિશામાં હોય તો નળાકારની વક્રબાજુઓ સાથે સંકળાયેલ ફ્લક્સ કેટલું? ($\\vec{E} = \\pm 100\\hat{i}$ NC$^{-1}$ લો.)
+                                    <img src="https://raw.githubusercontent.com/syedirsad/CHAP1/main/image_88a426.png" alt="Question on electric flux through cylinder" class="mx-auto my-4 max-w-xs">`,
+                                    options: [
+                                        `1.57 Wb`,
+                                        `3.14 Wb`,
+                                        `0 Wb`,
+                                        `6.28 Wb`
+                                    ],
+                                    solution: `નળાકારની વક્ર સપાટીનો ક્ષેત્રફળ સદિશ હંમેશા ત્રિજ્યાવર્તી દિશામાં હોય છે, જ્યારે વિદ્યુતક્ષેત્ર X-અક્ષની દિશામાં છે. તેથી, વક્ર સપાટી પર $\\vec{E}$ અને $\\vec{A}$ વચ્ચેનો ખૂણો 90° હશે. $\\Phi = EA \\cos\\theta = EA \\cos(90°) = 0$.`
+                                },
+                                en: {
+                                    question: `A uniform electric field is in the positive X-direction for positive X-axis and in the negative X-direction for negative X-axis. If a cylinder of length 20 cm and radius 2 cm has its center at the origin and its axis along the X-direction, what is the flux associated with the curved surfaces of the cylinder? (Take $\\vec{E} = \\pm 100\\hat{i}$ NC$^{-1}$.)
+                                    <img src="https://raw.githubusercontent.com/syedirsad/CHAP1/main/image_88a426.png" alt="Question on electric flux through cylinder" class="mx-auto my-4 max-w-xs">`,
+                                    options: [
+                                        `1.57 Wb`,
+                                        `3.14 Wb`,
+                                        `0 Wb`,
+                                        `6.28 Wb`
+                                    ],
+                                    solution: `The area vector of the curved surface of the cylinder is always radial, while the electric field is along the X-axis. Therefore, the angle between $\\vec{E}$ and $\\vec{A}$ on the curved surface will be 90°. $\\Phi = EA \\cos\\theta = EA \\cos(90°) = 0$.`
+                                },
+                                origin: 'PYQ July 2023'
+                            },
+                            {
+                                answer: 0, // Option A: 0.045 nCm
+                                gu: {
+                                    question: `એક વિદ્યુત ડાયપોલમાં બે વીજભાર વચ્ચેનું અંતર 5 mm અને વીજભાર $9 \\times 10^{-9}$ C હોય તો આ ડાયપોલની ડાયપોલ મોમેન્ટ કેટલી?
+                                    <img src="https://raw.githubusercontent.com/syedirsad/CHAP1/main/image_88a140.png" alt="Question on dipole moment" class="mx-auto my-4 max-w-xs">`,
+                                    options: [
+                                        `0.045 nCm`,
+                                        `0.0045 nCm`,
+                                        `0.045 $\\mu$Cm`,
+                                        `0.45 $\\mu$Cm`
+                                    ],
+                                    solution: `ડાયપોલ મોમેન્ટ $p = q \\times (2a)$. અહીં $q = 9 \\times 10^{-9}$ C અને $2a = 5$ mm $= 5 \\times 10^{-3}$ m.
+                                    $p = (9 \\times 10^{-9}) \\times (5 \\times 10^{-3}) = 45 \\times 10^{-12}$ Cm $= 0.045 \\times 10^{-9}$ Cm $= 0.045$ nCm.`
+                                },
+                                en: {
+                                    question: `In an electric dipole, if the distance between two charges is 5 mm and the charge is $9 \\times 10^{-9}$ C, what is the dipole moment of this dipole?
+                                    <img src="https://raw.githubusercontent.com/syedirsad/CHAP1/main/image_88a140.png" alt="Question on dipole moment" class="mx-auto my-4 max-w-xs">`,
+                                    options: [
+                                        `0.045 nCm`,
+                                        `0.0045 nCm`,
+                                        `0.045 $\\mu$Cm`,
+                                        `0.45 $\\mu$Cm`
+                                    ],
+                                    solution: `Dipole moment $p = q \\times (2a)$. Here $q = 9 \\times 10^{-9}$ C and $2a = 5$ mm $= 5 \\times 10^{-3}$ m.
+                                    $p = (9 \\times 10^{-9}) \\times (5 \\times 10^{-3}) = 45 \\times 10^{-12}$ Cm $= 0.045 \\times 10^{-9}$ Cm $= 0.045$ nCm.`
+                                },
+                                origin: 'PYQ July 2023'
+                            },
+                            {
+                                answer: 3, // Option D: કવચનો સમગ્ર વીજભાર તેના કેન્દ્ર પર કેન્દ્રીત થયો હોય તેમ ગણીને મળતા વિદ્યુતક્ષેત્ર જેટલું હોય છે.
+                                gu: {
+                                    question: `સમાન વીજભાર વિતરણ ધરાવતા કવચની બહારના બિંદુએ વિદ્યુતક્ષેત્ર,
+                                    <img src="https://raw.githubusercontent.com/syedirsad/CHAP1/main/image_889d7d.jpg" alt="Question on electric field outside shell" class="mx-auto my-4 max-w-xs">`,
+                                    options: [
+                                        `શૂન્ય હોય છે.`,
+                                        `અનંત હોય છે.`,
+                                        `વીજભારથી સ્વતંત્ર છે.`,
+                                        `કવચનો સમગ્ર વીજભાર તેના કેન્દ્ર પર કેન્દ્રીત થયો હોય તેમ ગણીને મળતા વિદ્યુતક્ષેત્ર જેટલું હોય છે.`
+                                    ],
+                                    solution: `સમાન વીજભાર વિતરણ ધરાવતા ગોળાકાર કવચની બહારના બિંદુએ વિદ્યુતક્ષેત્ર એવું હોય છે કે જાણે કવચનો સમગ્ર વિદ્યુતભાર તેના કેન્દ્ર પર કેન્દ્રિત થયેલો હોય.`
+                                },
+                                en: {
+                                    question: `The electric field at an external point to a uniformly charged spherical shell,
+                                    <img src="https://raw.githubusercontent.com/syedirsad/CHAP1/main/image_889d7d.jpg" alt="Question on electric field outside shell" class="mx-auto my-4 max-w-xs">`,
+                                    options: [
+                                        `is zero.`,
+                                        `is infinite.`,
+                                        `is independent of the charge.`,
+                                        `is equal to the electric field obtained by assuming the entire charge of the shell to be concentrated at its center.`
+                                    ],
+                                    solution: `For a uniformly charged spherical shell, the electric field at an external point is as if the entire charge of the shell is concentrated at its center.`
+                                },
+                                origin: 'PYQ July 2023'
+                            },
+                            {
+                                answer: 1, // Option B: C/m^3
+                                gu: {
+                                    question: `વીજભારની કદ ઘનતાનો એકમ નીચેના પૈકી કયો છે?
+                                    <img src="https://raw.githubusercontent.com/syedirsad/CHAP1/main/image_889d25.png" alt="Question on unit of volume charge density" class="mx-auto my-4 max-w-xs">`,
+                                    options: [
+                                        `m$^3$/C`,
+                                        `C/m$^3$`,
+                                        `C/m$^2$`,
+                                        `C.m$^3$`
+                                    ],
+                                    solution: `કદ વિદ્યુતભાર ઘનતા (volume charge density) $\\rho = Q/V$ છે, જ્યાં $Q$ વિદ્યુતભાર (એકમ C) અને $V$ કદ (એકમ m$^3$) છે. તેથી, એકમ C/m$^3$ છે.`
+                                },
+                                en: {
+                                    question: `Which of the following is the unit of volume charge density?
+                                    <img src="https://raw.githubusercontent.com/syedirsad/CHAP1/main/image_889d25.png" alt="Question on unit of volume charge density" class="mx-auto my-4 max-w-xs">`,
+                                    options: [
+                                        `m$^3$/C`,
+                                        `C/m$^3$`,
+                                        `C/m$^2$`,
+                                        `C.m$^3$`
+                                    ],
+                                    solution: `Volume charge density $\\rho = Q/V$, where $Q$ is charge (unit C) and $V$ is volume (unit m$^3$). Therefore, the unit is C/m$^3$.`
+                                },
+                                origin: 'PYQ July 2023'
                             }
                         ]
                     }
